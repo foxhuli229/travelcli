@@ -1,42 +1,127 @@
 <template>
     <div class="icons">
-        <div class="icon">
-            <div class="icon-img">
-                <img class="icon-imgcontent" src="http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png"/>
-            </div>
-            <p>热门景点</p>
-        </div>
+        <swiper>
+            <swiper-slide 
+                v-for="(page, index) of pages"
+                :key="index">
+                <div class="icon" 
+                    v-for="item of iconsList" 
+                    :key="item.id"
+                >
+                    <div class="icon-img">
+                        <img class="icon-imgcontent" :src="item.imgUrl"/>
+                    </div>
+                    <p class="icon-desc">{{item.title}}</p>
+                </div>
+            </swiper-slide>
+        </swiper>
     </div>
 </template>
 
 <script>
 export default {
-    name: 'HomeIcons'
+    name: 'HomeIcons',
+    data() {
+        return {
+            iconsList: [{
+                id: '0001',
+                imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png',
+                title: '景点门票'
+            },
+            {
+                id: '0002',
+                imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/6c/9e54a8540fee0102.png',
+                title: '故宫'
+            },
+            {
+                id: '0003',
+                imgUrl: 'http://img1.qunarzz.com/piao/fusion/1804/ff/fdf170ee89594b02.png',
+                title: '北京必游'
+            },
+            {
+                id: '0004',
+                imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/3e/86314b2af03b7502.png',
+                title: '水上乐园'
+            },
+            {
+                id: '0005',
+                imgUrl: 'http://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20191/0334cf5430b9b5505fd79e2b8d7e8670.png',
+                title: '爬长城'
+            },
+            {
+                id: '0006',
+                imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/67/9a1678221b8e0e02.png',
+                title: '台北水镇'
+            },
+            {
+                id: '0007',
+                imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/76/eb88861d78fb9902.png',
+                title: '动物植物园'
+            },
+            {
+                id: '0008',
+                imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/fa/2548667cb6e902.png',
+                title: '北京野生动物园'
+            },
+            {
+                id: '0009',
+                imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/fa/2548667cb6e902.png',
+                title: '一日游'
+            }]
+        }
+    },
+    computed: {
+        pages () {
+            const pages = []
+            this.iconsList.forEach((item, index) => {
+                const page = Math.floor(index / 8)
+                if (!pages[page]) {
+                    pages[page] = []
+                }
+                pages[page].push(item)
+            })
+            return pages
+        }
+    }
 }
 </script>
 
 <style lang="stylus" scoped>
-.icons
+@import '~@/assets/styles/varibles.styl'
+@import '~@/assets/styles/mixins.styl'
+.icons >>> .swiper-container
     height 0
-    overflow hidden
     padding-bottom 50%
-    background-color green
-    .icon
-        overflow hidden
-        float left
-        width 25%
-        height 0
-        padding-bottom 25%
-        // background-color red
-        position relative
-        .icon-img
-            position absolute
-            left 0
-            right 0
-            top 0
-            bottom .44rem
-            .icon-imgcontent
-                height 100%
+    margin-top .24rem
+.icon
+    overflow hidden
+    float left
+    width 25%
+    height 0
+    padding-bottom 25%
+    position relative
+    .icon-img
+        position absolute
+        left 0
+        right 0
+        top 0
+        bottom .44rem
+        .icon-imgcontent
+            height 100%
+            display block
+            margin 0 auto;
+    .icon-desc
+        bottom 0
+        right 0
+        left 0
+        height .44rem
+        line-height .44rem
+        color $darkTextColor
+        text-align center
+        position absolute
+        margin-top .1rem
+        font-size .28rem
+        ellipsis ()
 </style>
 
 
