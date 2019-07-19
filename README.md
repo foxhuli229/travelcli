@@ -23,6 +23,10 @@ npm run test
 ### Lints and fixes files
 ```
 npm run lint
+
+# 安装swiper https://github.com/surmon-china/vue-awesome-swiper
+npm install vue-awesome-swiper@2.6.7 --save
+
 ```
 
 ### Customize configuration
