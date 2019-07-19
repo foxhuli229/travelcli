@@ -27,9 +27,12 @@ npm run lint
 # 安装swiper https://github.com/surmon-china/vue-awesome-swiper
 npm install vue-awesome-swiper@2.6.7 --save
 
-# git 创建新分支、并切换为新建的分支
-git checkout 分支名
-例如：git checkout index-swiper
+# git 创建新分支
+git checkout -b 分支名
+例如：git checkout -b index-swiper
+
+# 获取创建新分支
+git pull
 
 # 查看当前分支信息，以及更改的文件
 git status
