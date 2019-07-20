@@ -1,11 +1,11 @@
 <template>
     <div class="icons">
-        <swiper>
+        <swiper :options="swiperOption">
             <swiper-slide 
                 v-for="(page, index) of pages"
                 :key="index">
                 <div class="icon" 
-                    v-for="item of iconsList" 
+                    v-for="item of page" 
                     :key="item.id"
                 >
                     <div class="icon-img">
@@ -14,6 +14,8 @@
                     <p class="icon-desc">{{item.title}}</p>
                 </div>
             </swiper-slide>
+             <!-- Optional controls -->
+            <div class="swiper-pagination"  slot="pagination"></div>
         </swiper>
     </div>
 </template>
@@ -23,6 +25,10 @@ export default {
     name: 'HomeIcons',
     data() {
         return {
+            swiperOption: {
+                pagination: '.swiper-pagination',
+                loop: true
+            },
             iconsList: [{
                 id: '0001',
                 imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png',
@@ -65,8 +71,8 @@ export default {
             },
             {
                 id: '0009',
-                imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/fa/2548667cb6e902.png',
-                title: '一日游'
+                imgUrl: 'http://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20193/a40ee278d67000f2a29d2e20f6a029b3.png',
+                title: '自然风光'
             }]
         }
     },
@@ -76,7 +82,7 @@ export default {
             this.iconsList.forEach((item, index) => {
                 const page = Math.floor(index / 8)
                 if (!pages[page]) {
-                    pages[page] = []
+                pages[page] = []
                 }
                 pages[page].push(item)
             })
@@ -90,38 +96,39 @@ export default {
 @import '~@/assets/styles/varibles.styl'
 @import '~@/assets/styles/mixins.styl'
 .icons >>> .swiper-container
-    height 0
-    padding-bottom 50%
-    margin-top .24rem
-.icon
-    overflow hidden
-    float left
-    width 25%
-    height 0
-    padding-bottom 25%
-    position relative
+    height: 0
+    padding-bottom: 50%
+.icons
+    margin-top: .1rem
+    .icon
+        position: relative
+        overflow: hidden
+        float: left
+        width: 25%
+        height: 0
+        padding-bottom: 25%
     .icon-img
-        position absolute
-        left 0
-        right 0
-        top 0
-        bottom .44rem
+        position: absolute
+        top: 0
+        left: 0
+        right: 0
+        bottom: .44rem
+        box-sizing: border-box
+        padding: .1rem
         .icon-imgcontent
-            height 100%
-            display block
-            margin 0 auto;
+            display: block
+            margin: 0 auto
+            height: 100%
     .icon-desc
-        bottom 0
-        right 0
-        left 0
-        height .44rem
-        line-height .44rem
-        color $darkTextColor
-        text-align center
-        position absolute
-        margin-top .1rem
-        font-size .28rem
-        ellipsis ()
+        position: absolute
+        left: 0
+        right: 0
+        bottom: 0
+        height: .44rem
+        line-height: .44rem
+        text-align: center
+        color: $darkTextColor
+        ellipsis()
 </style>
 
 
