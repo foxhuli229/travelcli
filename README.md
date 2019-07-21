@@ -50,6 +50,12 @@ git merge origin/index-swiper
 # 将更新的代码的提交到主分支上
 git push
 
+# 安装
+install
+
+# 卸载
+npm uninstall XXX -S 卸载XXX依赖
+
 ```
 
 ### Customize configuration

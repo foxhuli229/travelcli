@@ -119,6 +119,7 @@ export default {
 @import '~@/assets/styles/mixins.styl'
 .icons-content
     height auto
+    background-color #ffffff
     .icons >>> .swiper-container
         height: 0
         padding-bottom: 50%
@@ -158,6 +159,7 @@ export default {
         background-color: #fff
         display: -webkit-box
         border-top: 1px solid #e0e0e0
+        transform-origin: 0 0;
         margin-top: 0.4rem;
     .icon-bottom li
         width 0
@@ -170,6 +172,7 @@ export default {
         ellipsis()
     .icon-bottom li:nth-child(2)
         border-left 1px solid #e0e0e0
+        transform-origin: 0 0;
         
 </style>
 
