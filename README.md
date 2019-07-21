@@ -24,7 +24,7 @@ npm run test
 ```
 npm run lint
 
-# 安装swiper https://github.com/surmon-china/vue-awesome-swiper
+# 安装swiper https://github.com/surmon-china/vue-awesome-swiper 版本太低
 npm install vue-awesome-swiper@2.6.7 --save
 
 # git 创建新分支
