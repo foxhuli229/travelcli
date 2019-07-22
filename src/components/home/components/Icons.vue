@@ -128,56 +128,54 @@ export default {
         padding-bottom: 55%
     .icons >>> .swiper-pagination-bullets
         bottom 0px
-    .icons
-        margin-top: .1rem
-        .icon
-            position: relative
-            overflow: hidden
-            float: left
-            width: 25%
-            height: 0
-            padding-bottom: 25%
-        .icon-img
-            position: absolute
-            top: 0
-            left: 0
-            right: 0
-            bottom: .44rem
-            box-sizing: border-box
-            padding: .1rem
-            .icon-imgcontent
-                display: block
-                margin: 0 auto
-                height: 100%
-        .icon-desc
-            position: absolute
-            left: 0
-            right: 0
-            bottom: 0
-            height: .44rem
-            line-height: .44rem
-            text-align: center
-            color: $darkTextColor
-            ellipsis()
-    .icon-bottom
-        width: 100%
-        background-color: #fff
-        display: -webkit-box
-        border-top: 1px solid #e0e0e0
-        transform-origin: 0 0;
-        margin-top: 0.1rem;
-    .icon-bottom li
-        width 0
-        height: .98rem
-        font-size: .28rem
-        color: #212121
-        line-height: .98rem
+    .icon
+        position: relative
+        overflow: hidden
+        float: left
+        width: 25%
+        height: 0
+        padding-bottom: 25%
+    .icon-img
+        position: absolute
+        top: 0
+        left: 0
+        right: 0
+        bottom: .44rem
+        box-sizing: border-box
+        padding: .1rem
+        .icon-imgcontent
+            display: block
+            margin: 0 auto
+            height: 100%
+    .icon-desc
+        position: absolute
+        left: 0
+        right: 0
+        bottom: 0
+        height: .44rem
+        line-height: .44rem
         text-align: center
-        -webkit-box-flex: 1;
+        color: $darkTextColor
         ellipsis()
-    .icon-bottom li:nth-child(2)
-        border-left 1px solid #e0e0e0
-        transform-origin: 0 0;
+.icon-bottom
+    width: 100%
+    background-color: #fff
+    display: -webkit-box
+    border-top: 1px solid #e0e0e0
+    transform-origin: 0 0;
+    margin-top: 0.1rem;
+.icon-bottom li
+    width 0
+    height: .98rem
+    font-size: .28rem
+    color: #212121
+    line-height: .98rem
+    text-align: center
+    -webkit-box-flex: 1;
+    ellipsis()
+.icon-bottom li:nth-child(2)
+    border-left 1px solid #e0e0e0
+    transform-origin: 0 0;
         
 </style>
 
