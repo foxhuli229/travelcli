@@ -18,9 +18,11 @@ export default {
         return {
             swiperOption: {
                 loop: true,
-                autoplay: 3000,
-                pagination: '.swiper-pagination'
-
+                autoplay: true,
+                pagination: {
+                    el: '.swiper-pagination',
+                    type: 'bullets'
+                }
             },
             imgList: [{
                 imgUrl: 'http://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20196/818f6cc784ae6669b74bbbb255414a53.jpg_750x200_66ca5873.jpg'

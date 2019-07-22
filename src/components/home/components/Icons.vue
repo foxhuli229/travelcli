@@ -39,7 +39,10 @@ export default {
     data() {
         return {
             swiperOption: {
-                pagination: '.swiper-pagination',
+                  pagination: {
+                    el: '.swiper-pagination',
+                    type: 'bullets'
+                }
             },
             iconsList: [{
                 id: '0001',
@@ -122,7 +125,9 @@ export default {
     background-color #ffffff
     .icons >>> .swiper-container
         height: 0
-        padding-bottom: 50%
+        padding-bottom: 55%
+    .icons >>> .swiper-pagination-bullets
+        bottom 0px
     .icons
         margin-top: .1rem
         .icon
@@ -160,7 +165,7 @@ export default {
         display: -webkit-box
         border-top: 1px solid #e0e0e0
         transform-origin: 0 0;
-        margin-top: 0.4rem;
+        margin-top: 0.1rem;
     .icon-bottom li
         width 0
         height: .98rem
