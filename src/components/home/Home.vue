@@ -12,8 +12,8 @@
 import HomeHeader from './components/Header'
 import HomeSwiper from './components/Swiper'
 import HomeIcons from './components/Icons'
-import HomeRecommend from './components/Recommend'
 import HomeWeekSearch from './components/WeekSearch'
+import HomeRecommend from './components/Recommend'
 export default {
     name: 'Home',
     components: {
@@ -26,8 +26,10 @@ export default {
 }
 </script>
 
-<style scoped lang="stylus">
-.home
-   background-color #f5f5f5
+<style>
+.home {
+ background-color: #f5f5f5;
+}
+    
 </style>
 
