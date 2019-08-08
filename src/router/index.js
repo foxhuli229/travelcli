@@ -10,6 +10,11 @@ export default new Router({
             path: '/',
             name: 'Home',
             component: Home
+        },
+        {
+            path: '/axios2-2',
+            name: 'axios请求方法',
+            component: ()=> import('@/components/home/views/axios2-2.vue') //懒加载，只有访问改页面，才加载组件
         }
     ]
 })

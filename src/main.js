@@ -3,6 +3,8 @@ import App from './App.vue'
 import router from './router'
 import fastClick from 'fastClick'
 import VueAwesomeSwiper from 'vue-awesome-swiper'
+import axios from 'axios'
+
 import 'swiper/dist/css/swiper.css'
 import './assets/styles/border.css' //1像素的处理
 import './assets/styles/reset.css'
@@ -16,6 +18,8 @@ Vue.config.productionTip = false
 fastClick.attach(document.body)
 
 Vue.use(VueAwesomeSwiper, /* { default global options } */)
+
+Vue.prototype.$ajax= axios
 
 new Vue({
   render: h => h(App),
