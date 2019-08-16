@@ -19,7 +19,7 @@
     <div class="swiper-container">
       <!-- swiper -->
       <swiper :options="swiperOption">
-        <swiper-slide v-for="(item, index) of weekimgList" :key="index">
+        <swiper-slide v-for="(item, index) of list" :key="index">
           <a class="cont" :href="item.linkUrl">
             <!-- 排名 -->
             <div class="cont-top image-ready" v-if="index < 3">
@@ -54,6 +54,9 @@
 <script>
 export default {
   name: "HomeWeekSearch",
+  props: {
+    list: Array,
+  },
   data() {
     return {
       swiperOption: {
@@ -65,76 +68,6 @@ export default {
           hide: true
         }
       },
-      weekimgList: [{
-        linkUrl: "http://touch.piao.qunar.com/touch/detail.htm?id=41794&from=as_recommend_sight",
-        topimgUrl: "http://img1.qunarzz.com/piao/fusion/1710/ab/159673b63e6ca702.png",
-        imgUrl: "http://img1.qunarzz.com/sight/p0/1805/ad/ad507355a167f587a3.img.jpg_250x250_608b4e13.jpg",
-        title: '重庆长江索道',
-        pirce: '￥28'
-      },
-      {
-        linkUrl: "http://touch.piao.qunar.com/touch/detail.htm?id=193527&from=as_recommend_sight",
-        topimgUrl: "http://img1.qunarzz.com/piao/fusion/1710/2d/36d0c4adaebbbc02.png",
-        imgUrl: "http://img1.qunarzz.com/sight/p0/1505/be/be4802e10f3b3107.water.jpg_250x250_45ab93e6.jpg",
-        title: '武隆天坑地缝国家地质公园',
-        pirce: '￥48'
-      },
-      {
-        linkUrl: "http://touch.piao.qunar.com/touch/detail.htm?id=4522&from=as_recommend_sight",
-        topimgUrl: "http://img1.qunarzz.com/piao/fusion/1710/67/edc47ffef9e96b02.png",
-        imgUrl: "http://img1.qunarzz.com/sight/p0/201403/07/6457ef01e33f69234f30949a340f2f56.jpg_250x250_03994b45.jpg",
-        title: '重庆海昌加勒比海水世界',
-        pirce: '￥108'
-      },
-      {
-        linkUrl: "http://touch.piao.qunar.com/touch/detail.htm?id=40414&from=as_recommend_sight",
-        topimgUrl: "",
-        imgUrl: "http://img1.qunarzz.com/sight/p0/1810/36/36ed80c6e147d019a3.img.png_250x250_d039f35c.png",
-        title: '重庆两江夜游',
-        pirce: '￥138'
-      },
-      {
-        linkUrl: "http://touch.piao.qunar.com/touch/detail.htm?id=33744&from=as_recommend_sight",
-        topimgUrl: "",
-        imgUrl: "http://img1.qunarzz.com/sight/p0/1805/93/93a185e4b726bda0a3.img.jpg_250x250_1dd1e451.jpg",
-        title: '佛影峡生态旅游区',
-        pirce: '￥68'
-      },
-      {
-        linkUrl: "http://touch.piao.qunar.com/touch/detail.htm?id=459472&from=as_recommend_sight",
-        topimgUrl: "",
-        imgUrl: "http://img1.qunarzz.com/sight/p0/1606/b0/b06aacf9a3ce5f8ce2.img.jpg_250x250_e2667623.jpg",
-        title: '龙浒峡漂流',
-        pirce: '￥158'
-      },
-      {
-        linkUrl: "http://touch.piao.qunar.com/touch/detail.htm?id=14770&from=as_recommend_sight",
-        topimgUrl: "",
-        imgUrl: "http://img1.qunarzz.com/sight/p0/1507/8d/8d1817185ad3f395.img.jpg_250x250_2a9d3bd3.jpg",
-        title: '武隆天生三桥风景区',
-        pirce: '￥200'
-      },
-      {
-        linkUrl: "http://touch.piao.qunar.com/touch/detail.htm?id=455388&from=as_recommend_sight",
-        topimgUrl: "",
-        imgUrl: "http://img1.qunarzz.com/sight/p0/1803/b9/b9bc15fc941a2e8ba3.img.jpg_250x250_567f9b77.jpg",
-        title: '梦幻奥陶纪',
-        pirce: '￥168'
-      },
-      {
-        linkUrl: "http://touch.piao.qunar.com/touch/detail.htm?id=465379&from=as_recommend_sight",
-        topimgUrl: "",
-        imgUrl: "http://img1.qunarzz.com/sight/p0/1709/e4/e4b97c2fbb4e696a3.img.png_250x250_0aa87bab.png",
-        title: '重庆欢乐谷',
-        pirce: '￥110'
-      },
-      {
-        linkUrl: "http://touch.piao.qunar.com/touch/detail.htm?id=459633&from=as_recommend_sight",
-        topimgUrl: "",
-        imgUrl: "http://img1.qunarzz.com/sight/p0/1606/ee/ee6fc1161ebc1215e2.water.jpg_250x250_e5cef2db.jpg",
-        title: '重庆冰巴水世界',
-        pirce: '￥118'
-      }]
     };
   }
 };

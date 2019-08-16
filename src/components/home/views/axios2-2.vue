@@ -5,7 +5,6 @@
 </template>
 
 <script>
-const axios = require('axios');
 /**
  *  axios 请求方式get、post、put、patch、delete
  *  get：获取数据
@@ -26,7 +25,7 @@ export default {
     methods: {
         getinfo() {
 //http://localhost:8080/index.json
-        this.$axios.get("/index.json",{
+        this.axios.get("/static/mock/index.json",{
             params: {
                 id: 12
             }
@@ -34,9 +33,9 @@ export default {
             console.log(res)
         })
 
-        this.$axios({
+        this.axios({
             method: 'get',
-            url: '/index.json',
+            url: '/static/mock/index.json',
             params: {
                 id: 12
             }

@@ -11,7 +11,7 @@
     </div>
 
     <ul class="rec-list">
-      <li class="border-bottom item" v-for="(item, index) of recommendList" :key="index">
+      <li class="border-bottom item" v-for="(item, index) of list" :key="index">
         <a :href="item.linkUrl">
           <div class="rec-list-imgcon image-ready">
             <img
@@ -64,41 +64,13 @@ export default {
   components: {
     [Rate.name]: Rate
   },
+  props: {
+    list: Array,
+  },
   name: "HomeRecommend",
   data() {
     return {
-      recommendList: [
-        {
-          linkUrl:
-            "http://touch.piao.qunar.com/touch/detail.htm?id=33744&from=as_recommend_sight",
-          linkbgUrl:
-            "background-image:url(https://img1.qunarzz.com/piao/fusion/1802/20/2ba6d10b17972e02.png)",
-          linktitle: "随买随用",
-          imgUrl:
-            "http://img1.qunarzz.com/sight/p0/1805/93/93a185e4b726bda0a3.img.jpg_200x200_ea61f3c5.jpg",
-          title: "佛影峡生态旅游区",
-          rate: 5,
-          commentNum: "967条评论",
-          priceNum: 68,
-          address: "巴南区",
-          comment: ""
-        },
-        {
-          linkUrl:
-            "http://touch.piao.qunar.com/touch/detail.htm?id=3918984278&from=as_recommend_sight",
-          linkbgUrl:
-            "background-image:url(https://img1.qunarzz.com/piao/fusion/1802/52/b9080e45b69b4f02.png)",
-          linktitle: "可订今日",
-          imgUrl:
-            "http://img1.qunarzz.com/sight/p0/1805/93/93a185e4b726bda0a3.img.jpg_200x200_ea61f3c5.jpg",
-          title: "重庆两江夜游",
-          rate: 4,
-          commentNum: "17076条评论",
-          priceNum: 138,
-          address: "渝中区",
-          comment: "重庆本月收藏Top5╰(￣▽￣)╭"
-        }
-      ]
+     
     };
   }
 };

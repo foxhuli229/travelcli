@@ -1,0 +1,187 @@
+{
+  "code": 200,
+  "data": {
+    "city": "重庆",
+    "swiperList": [
+      {
+        "id": "0001",
+        "imgUrl": "http://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20196/818f6cc784ae6669b74bbbb255414a53.jpg_750x200_66ca5873.jpg"
+      },
+      {
+        "id": "0002",
+        "imgUrl": "http://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20197/ae8987bff39ff10e82675a3643154e66.jpg_750x200_0f187b2e.jpg"
+      },
+      {
+        "id": "0003",
+        "imgUrl": "http://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20197/6e07f11d492a880c2b5fb9889b3cb008.jpg_750x200_e0e88021.jpg"
+      },
+      {
+        "id": "0004",
+        "imgUrl": "http://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20197/55f607eaf73751de9821c485f27bf22a.jpg_750x200_e9bb4850.jpg"
+      }
+    ],
+    "iconsList": [
+      {
+        "id": "0001",
+        "imgUrl": "http://img1.qunarzz.com/piao/fusion/1611/54/ace00878a52d9702.png",
+        "desc": "景点门票"
+      },
+      {
+        "id": "0002",
+        "imgUrl": "http://img1.qunarzz.com/piao/fusion/1711/df/86cbcfc533330d02.png",
+        "desc": "滑雪季"
+      },
+      {
+        "id": "0003",
+        "imgUrl": "http://img1.qunarzz.com/piao/fusion/1710/a6/83f636bd75ae6302.png",
+        "desc": "泡温泉"
+      },
+      {
+        "id": "0004",
+        "imgUrl": "http://img1.qunarzz.com/piao/fusion/1611/35/2640cab202c41b02.png",
+        "desc": "动植园"
+      },
+      {
+        "id": "0005",
+        "imgUrl": "http://img1.qunarzz.com/piao/fusion/1611/d0/e09575e66f4aa402.png",
+        "desc": "游乐园"
+      },
+      {
+        "id": "0006",
+        "imgUrl": "http://img1.qunarzz.com/piao/fusion/1611/59/569d3c096e542502.png",
+        "desc": "必游榜单"
+      },
+      {
+        "id": "0007",
+        "imgUrl": "http://img1.qunarzz.com/piao/fusion/1611/17/4bd370f3eb1acd02.png",
+        "desc": "演出"
+      },
+      {
+        "id": "0008",
+        "imgUrl": "http://img1.qunarzz.com/piao/fusion/1611/7f/b1ea3c8c7fb6db02.png",
+        "desc": "城市观光"
+      },
+      {
+        "id": "0009",
+        "imgUrl": "http://img1.qunarzz.com/piao/fusion/1611/a9/ffc620dbda9b9c02.png",
+        "desc": "一日游"
+      }
+    ],
+    "weekimgList": [
+      {
+        "linkUrl": "http://touch.piao.qunar.com/touch/detail.htm?id=41794&from=as_recommend_sight",
+        "topimgUrl": "http://img1.qunarzz.com/piao/fusion/1710/ab/159673b63e6ca702.png",
+        "imgUrl": "http://img1.qunarzz.com/sight/p0/1805/ad/ad507355a167f587a3.img.jpg_250x250_608b4e13.jpg",
+        "title": "重庆长江索道",
+        "pirce": "￥28"
+      },
+      {
+        "linkUrl": "http://touch.piao.qunar.com/touch/detail.htm?id=193527&from=as_recommend_sight",
+        "topimgUrl": "http://img1.qunarzz.com/piao/fusion/1710/2d/36d0c4adaebbbc02.png",
+        "imgUrl": "http://img1.qunarzz.com/sight/p0/1505/be/be4802e10f3b3107.water.jpg_250x250_45ab93e6.jpg",
+        "title": "武隆天坑地缝国家地质公园",
+        "pirce": "￥48"
+      },
+      {
+        "linkUrl": "http://touch.piao.qunar.com/touch/detail.htm?id=4522&from=as_recommend_sight",
+        "topimgUrl": "http://img1.qunarzz.com/piao/fusion/1710/67/edc47ffef9e96b02.png",
+        "imgUrl": "http://img1.qunarzz.com/sight/p0/201403/07/6457ef01e33f69234f30949a340f2f56.jpg_250x250_03994b45.jpg",
+        "title": "重庆海昌加勒比海水世界",
+        "pirce": "￥108"
+      },
+      {
+        "linkUrl": "http://touch.piao.qunar.com/touch/detail.htm?id=40414&from=as_recommend_sight",
+        "topimgUrl": "",
+        "imgUrl": "http://img1.qunarzz.com/sight/p0/1810/36/36ed80c6e147d019a3.img.png_250x250_d039f35c.png",
+        "title": "重庆两江夜游",
+        "pirce": "￥138"
+      },
+      {
+        "linkUrl": "http://touch.piao.qunar.com/touch/detail.htm?id=33744&from=as_recommend_sight",
+        "topimgUrl": "",
+        "imgUrl": "http://img1.qunarzz.com/sight/p0/1805/93/93a185e4b726bda0a3.img.jpg_250x250_1dd1e451.jpg",
+        "title": "佛影峡生态旅游区",
+        "pirce": "￥68"
+      },
+      {
+        "linkUrl": "http://touch.piao.qunar.com/touch/detail.htm?id=459472&from=as_recommend_sight",
+        "topimgUrl": "",
+        "imgUrl": "http://img1.qunarzz.com/sight/p0/1606/b0/b06aacf9a3ce5f8ce2.img.jpg_250x250_e2667623.jpg",
+        "title": "龙浒峡漂流",
+        "pirce": "￥158"
+      },
+      {
+        "linkUrl": "http://touch.piao.qunar.com/touch/detail.htm?id=14770&from=as_recommend_sight",
+        "topimgUrl": "",
+        "imgUrl": "http://img1.qunarzz.com/sight/p0/1507/8d/8d1817185ad3f395.img.jpg_250x250_2a9d3bd3.jpg",
+        "title": "武隆天生三桥风景区",
+        "pirce": "￥200"
+      },
+      {
+        "linkUrl": "http://touch.piao.qunar.com/touch/detail.htm?id=455388&from=as_recommend_sight",
+        "topimgUrl": "",
+        "imgUrl": "http://img1.qunarzz.com/sight/p0/1803/b9/b9bc15fc941a2e8ba3.img.jpg_250x250_567f9b77.jpg",
+        "title": "梦幻奥陶纪",
+        "pirce": "￥168"
+      },
+      {
+        "linkUrl": "http://touch.piao.qunar.com/touch/detail.htm?id=465379&from=as_recommend_sight",
+        "topimgUrl": "",
+        "imgUrl": "http://img1.qunarzz.com/sight/p0/1709/e4/e4b97c2fbb4e696a3.img.png_250x250_0aa87bab.png",
+        "title": "重庆欢乐谷",
+        "pirce": "￥110"
+      },
+      {
+        "linkUrl": "http://touch.piao.qunar.com/touch/detail.htm?id=459633&from=as_recommend_sight",
+        "topimgUrl": "",
+        "imgUrl": "http://img1.qunarzz.com/sight/p0/1606/ee/ee6fc1161ebc1215e2.water.jpg_250x250_e5cef2db.jpg",
+        "title": "重庆冰巴水世界",
+        "pirce": "￥118"
+      }
+    ],
+    "recommendList": [
+      {
+        "linkUrl": "http://touch.piao.qunar.com/touch/detail.htm?id=33744&from=as_recommend_sight",
+        "linkbgUrl": "background-image:url(https://img1.qunarzz.com/piao/fusion/1802/20/2ba6d10b17972e02.png)",
+        "linktitle": "随买随用",
+        "imgUrl": "http://img1.qunarzz.com/sight/p0/1805/93/93a185e4b726bda0a3.img.jpg_200x200_ea61f3c5.jpg",
+        "title": "佛影峡生态旅游区",
+        "rate": 5,
+        "commentNum": "967条评论",
+        "priceNum": 68,
+        "address": "巴南区",
+        "comment": ""
+      },
+      {
+        "linkUrl": "http://touch.piao.qunar.com/touch/detail.htm?id=3918984278&from=as_recommend_sight",
+        "linkbgUrl": "background-image:url(https://img1.qunarzz.com/piao/fusion/1802/52/b9080e45b69b4f02.png)",
+        "linktitle": "可订今日",
+        "imgUrl": "http://img1.qunarzz.com/sight/p0/1805/93/93a185e4b726bda0a3.img.jpg_200x200_ea61f3c5.jpg",
+        "title": "重庆两江夜游",
+        "rate": 4,
+        "commentNum": "17076条评论",
+        "priceNum": 138,
+        "address": "渝中区",
+        "comment": "重庆本月收藏Top5╰(￣▽￣)╭"
+      }
+    ],
+    "weekendgogingList": [
+      {
+        "linkUrl":
+          "http://piao.qunar.com/touch/toSku.htm?skuId=768&skuName=%E9%87%8D%E5%BA%86%E5%A4%9C%E6%99%AF%E5%A4%A7%E8%B5%8F&cat=from_area%3Dts_sku%26from_index%3D0%26from_value%3D%25E9%2587%258D%25E5%25BA%2586%25E5%25A4%259C%25E6%2599%25AF%25E5%25A4%25A7%25E8%25B5%258F%26dist_city%3D%25E9%2587%258D%25E5%25BA%2586",
+        "imgUrl":
+          "http://img1.qunarzz.com/sight/source/1812/4c/33ad31d025fef.jpg_r_640x214_7821b813.jpg",
+        "title": "重庆夜景大赏",
+        "desc": "享巴渝特色，赏两江风光，感受不一样的重庆夜景！"
+      },
+      {
+        "linkUrl":
+          "http://touch.piao.qunar.com/touch/detail.htm?id=3918984278&from=as_recommend_sight",
+        "imgUrl":
+          "http://img1.qunarzz.com/sight/source/1505/53/4bcd11cc3a5374.jpg_r_640x214_988a4cee.jpg",
+        "title": "重庆两江夜游",
+        "desc": "重庆，非去不可"
+      }
+    ]
+  }
+}
