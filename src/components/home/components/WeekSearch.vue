@@ -60,6 +60,7 @@ export default {
   data() {
     return {
       swiperOption: {
+        width: 106,
         slidesPerView: 3,
         slidesPerColumnFill : 'row',
         slidesOffsetAfter : 100,
@@ -127,10 +128,6 @@ export default {
   height: 3rem;
   overflow: hidden;
   padding: 0 0.24rem;
-}
-
-.swiper-container >>> .swiper-slide {
-  width: 2.12rem !important;
 }
 
 .weeksearch .swiper-container .cont {
