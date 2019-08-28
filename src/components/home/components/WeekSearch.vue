@@ -60,7 +60,8 @@ export default {
   data() {
     return {
       swiperOption: {
-        width: 106,
+        // width: 100,
+        // height: 100,
         slidesPerView: 3,
         slidesPerColumnFill : 'row',
         slidesOffsetAfter : 100,
