@@ -1,9 +1,15 @@
 <template>
   <div>
     <city-header></city-header>
-    <city-search></city-search>
-    <city-list :cities="cities" :hot="hotCities"></city-list>
-    <city-aplhabet :cities="cities"></city-aplhabet>
+    <city-search 
+        :cities="cities" ></city-search>
+    <city-list 
+        :cities="cities" 
+        :hot="hotCities"
+        :letter="letter"></city-list>
+    <city-aplhabet 
+        :cities="cities"
+        @change="handleLetterChange"></city-aplhabet>
   </div>
 </template>
 
@@ -23,8 +29,9 @@ export default {
   },
   data() {
       return {
-          cities: [],
-          hotCities: []
+          cities: {},
+          hotCities: [],
+          letter: ''
       }
   },
   methods: {
@@ -36,9 +43,25 @@ export default {
         res = res.data;
         if(res.ret && res.data){
             const data = res.data;
-            this.cities = data.cities;
             this.hotCities = data.hotCities;
+            this.cities = data.cities;
+            // this.objOfValueToArr(data.cities);
         }
+    },
+    //object转array数组
+    objOfValueToArr(object) {
+        let arr = [];
+        let i = 0;
+        for (let item in object) {
+            arr[i] = object[item];
+            i++;
+        }
+        return this.cities = arr;
+    },
+    //兄弟之间的监听
+    handleLetterChange(letter) {
+        this.letter = letter;
+        // console.log(letter);
     }
   },
   mounted() {

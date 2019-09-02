@@ -25,23 +25,23 @@ export default {
     methods: {
         getinfo() {
 //http://localhost:8080/index.json
-        this.axios.get("/static/mock/index.json",{
-            params: {
-                id: 12
-            }
-        }).then((res)=>{
-            console.log(res)
-        })
+        // this.axios.get("/static/mock/index.json",{
+        //     params: {
+        //         id: 12
+        //     }
+        // }).then((res)=>{
+        //     console.log(res)
+        // })
 
-        this.axios({
-            method: 'get',
-            url: '/static/mock/index.json',
-            params: {
-                id: 12
-            }
-        }).then(res=>{
-            console.log(res)
-        })
+        // this.axios({
+        //     method: 'get',
+        //     url: '/static/mock/index.json',
+        //     params: {
+        //         id: 12
+        //     }
+        // }).then(res=>{
+        //     console.log(res)
+        // })
         }
         
     }

@@ -18,8 +18,6 @@
         </a>
       </li>
     </ul>
-
-    <p style="height: 3rem;"></p>
   </div>
 </template>
 
