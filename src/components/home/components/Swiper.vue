@@ -2,7 +2,7 @@
     <div class="wrapper">
         <swiper :options="swiperOption" v-if="showSiwper">
             <!-- slides -->
-            <swiper-slide v-for="(item,index) of List" :key="index">
+            <swiper-slide v-for="(item,index) of list" :key="index">
                 <img :src="item.imgUrl" class="swiper-img"/>
             </swiper-slide>
             <!-- Optional controls -->
@@ -15,7 +15,9 @@
 export default {
     name: 'HomeSwiper',
     props: {
-        List: Array,
+        list: {
+            type: Array
+        }
     },
     data() {
         return {
@@ -31,7 +33,7 @@ export default {
     },
     computed: {
         showSiwper() {
-            return this.List.length
+            return this.list.length
         }
     }
 }

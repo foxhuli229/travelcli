@@ -5,7 +5,8 @@
         type="text" 
         class="search-input" 
         placeholder="请输入城市名或拼音"
-        v-model="keyvalue" />
+        v-model="keyvalue" 
+        />
     </div>
     <!-- 搜索后显示列表 -->
     <div 
@@ -16,7 +17,9 @@
         <li 
           class="search-item border-bottom"
           v-for="(item, index) of list" 
-          :key="index">
+          :key="index"
+           @click="handleCityClick(item.name)"
+          >
           {{item.name}}
         </li>
         <li 
@@ -32,6 +35,8 @@
 <script>
 import { clearTimeout, setTimeout } from 'timers';
 import Bscroll from 'better-scroll'
+import { mapMutations } from 'vuex'
+
 export default {
   name: "CitySearch",
   props: {
@@ -79,10 +84,21 @@ export default {
       return !this.list.length;
     }
   },
-  mounted () {
+  methods: {
+    handleCityClick (city) {
+      // this.$store.dispatch('changeCity', city); 省略前
+      // this.$store.commit('changeCity', city); //省略后
+      this.changeCity(city);
+      this.$router.push('/') //点击后，跳转到首页
+    },
+    ...mapMutations(['changeCity'])
+  },
+  //钩子
+   mounted () {
     //滑动
     this.scroll = new Bscroll(this.$refs.search)
   }
+
 };
 </script> 
 

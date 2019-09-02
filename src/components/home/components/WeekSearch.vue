@@ -173,6 +173,7 @@ export default {
 
   // 名称
   .cont-title {
+    // height: 15px;
     top: 0;
     position: absolute;
     width: 2rem;

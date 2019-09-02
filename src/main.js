@@ -5,6 +5,7 @@ import fastClick from 'fastClick'
 import VueAwesomeSwiper from 'vue-awesome-swiper'
 import axios from 'axios'
 // import VueAxios from 'vue-axios'
+import store from './sotre/index'
 
 import 'swiper/dist/css/swiper.css'
 import './assets/styles/border.css' //1像素的处理
@@ -29,7 +30,8 @@ Vue.prototype.$axios = axios
 
 new Vue({
   render: h => h(App),
-  router
+  router,
+  store
 }).$mount('#app')
 
 // new Vue({
