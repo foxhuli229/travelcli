@@ -16,6 +16,7 @@ import HomeIcons from "./components/Icons";
 import HomeWeekSearch from "./components/WeekSearch";
 import HomeRecommend from "./components/Recommend";
 import HomeWeekgloging from "./components/Weekendgoging";
+import { mapState } from "vuex";
 export default {
   name: "Home",
   components: {
@@ -26,7 +27,7 @@ export default {
     HomeWeekSearch,
     HomeWeekgloging
   },
-  data() {
+  data () {
     return {
       // city: "", 更换为使用vuex，前端记录用户选择的当前城市
       swiperList: [],
@@ -36,15 +37,17 @@ export default {
       weekendgogingList: []
     };
   },
-  mounted() {
-    this.getHomeInfo();
+  computed: {
+    ...mapState(["city"])
   },
   methods: {
-    getHomeInfo() {
+    getHomeInfo () {
       this.$axios({
         url: "/api/index.json",
         methods: "get",
-        data: {}
+        data: {
+          city: this.city
+        }
       }).then(res => {
         if (res.data.code === 200) {
           // console.log(res);
@@ -52,7 +55,7 @@ export default {
         }
       });
     },
-    getHomeInfoSucc(res) {
+    getHomeInfoSucc (res) {
       if (res.data) {
         const data = res.data;
         // this.city = data.city; //城市
@@ -62,6 +65,14 @@ export default {
         this.recommendList = data.recommendList; //猜你喜欢
         this.weekendgogingList = data.weekendgogingList; //周末去哪儿
       }
+    },
+    mounted () {
+      console.log("mounted");
+      this.getHomeInfo();
+    },
+    //当采用keep-alive属性后，产生此钩子函数
+    activated () {
+      console.log("activated");
     }
   }
 };

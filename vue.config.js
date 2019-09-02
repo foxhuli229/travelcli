@@ -37,5 +37,5 @@ module.exports = {
             }
         }
     },
-    // lintOnSave: false, //关闭eslint语法验证，默认为 true
+    lintOnSave: false, //关闭eslint语法验证，默认为 true
 }

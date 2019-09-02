@@ -1,17 +1,17 @@
 <template>
   <div id="app">
-    <router-view></router-view>
+    <!-- keep-alive 首次会被加载数据，并且存缓存中 -->
+    <keep-alive>
+      <router-view/>
+    </keep-alive>
   </div>
 </template>
 
 <script>
-
 export default {
-  name: 'app',
-  components: {
-    
-  }
-}
+  name: "app",
+  components: {}
+};
 </script>
 
 <style>
