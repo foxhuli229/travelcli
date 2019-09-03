@@ -11,7 +11,7 @@ Vue.use(Vuex)
 export default new Vuex.Store ({
   state: state,
   //组件之间的传值可以省略此步骤，不过建议不省略,则直接使用commit提交
-  actions: actions,
+  // actions: actions,
   mutations: mutations,
   // 类似计算属性
   getters: {

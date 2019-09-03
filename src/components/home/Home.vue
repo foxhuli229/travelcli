@@ -34,23 +34,28 @@ export default {
       iconsList: [],
       weekimgList: [],
       recommendList: [],
-      weekendgogingList: []
+      weekendgogingList: [],
+      lastCity: "" //上次存放城市的变量
     };
   },
+  created () {
+    console.log("created");
+    this.getHomeInfo();
+  },
   computed: {
-    ...mapState(["city"])
+    ...mapState(['city'])
   },
   methods: {
     getHomeInfo () {
       this.$axios({
         url: "/api/index.json",
         methods: "get",
-        data: {
-          city: this.city
+        params: {
+          "city": this.city
         }
       }).then(res => {
         if (res.data.code === 200) {
-          // console.log(res);
+          console.log(res);
           this.getHomeInfoSucc(res.data);
         }
       });
@@ -58,7 +63,6 @@ export default {
     getHomeInfoSucc (res) {
       if (res.data) {
         const data = res.data;
-        // this.city = data.city; //城市
         this.swiperList = data.swiperList; //轮播
         this.iconsList = data.iconsList; //icon图标
         this.weekimgList = data.weekimgList; //本周热门推荐
@@ -66,14 +70,20 @@ export default {
         this.weekendgogingList = data.weekendgogingList; //周末去哪儿
       }
     },
-    mounted () {
-      console.log("mounted");
+    // el 被新创建的 vm.$el 替换，并挂载到实例上去之后调用该钩子。
+    mounted() {
+      this.lastCity = this.city;
       this.getHomeInfo();
-    },
+      console.log("mounted");
+    }, 
     //当采用keep-alive属性后，产生此钩子函数
     activated () {
-      console.log("activated");
-    }
+       console.log("activated");
+       if (this.lastCity !== this.city) {
+         this.lastCity = this.city;
+         this.getHomeInfo();
+       }
+    },
   }
 };
 </script>
