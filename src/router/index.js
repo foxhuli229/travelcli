@@ -20,6 +20,11 @@ export default new Router({
             path: '/city',
             name: '城市列表',
             component: () => import("@/components/city/City.vue")
+        },
+        {
+            path: '/detail/:id', //动态路由：detail为常量，:id 为变量
+            name: "列表详情",
+            component: () => import("@/components/detail/Detail.vue")
         }
     ]
 })

@@ -141,6 +141,7 @@
     ],
     "recommendList": [
       {
+        "id": "0001",
         "linkUrl": "http://touch.piao.qunar.com/touch/detail.htm?id=33744&from=as_recommend_sight",
         "linkbgUrl": "background-image:url(https://img1.qunarzz.com/piao/fusion/1802/20/2ba6d10b17972e02.png)",
         "linktitle": "随买随用",
@@ -153,6 +154,7 @@
         "comment": ""
       },
       {
+        "id": "0002",
         "linkUrl": "http://touch.piao.qunar.com/touch/detail.htm?id=3918984278&from=as_recommend_sight",
         "linkbgUrl": "background-image:url(https://img1.qunarzz.com/piao/fusion/1802/52/b9080e45b69b4f02.png)",
         "linktitle": "可订今日",

@@ -1,9 +1,14 @@
 const path = require("path")
 
+function resolve (dir) {
+    return path.join(__dirname, dir);
+}
+
 module.exports = {
     publicPath: '/', //若需要将打包后的文件放在一个文件下，则需要加改文件名 例如，如果你的应用被部署在 https://www.my-app.com/my-app/，则设置 publicPath 为 /my-app/
     outputDir: 'dist', //打包输出目录默认为 dist
     assetsDir: 'static', //生成静态文件，默认为 ''
+    // webpack配置
     configureWebpack: config => {
         if (process.env.NODE_ENV === 'production') {
             //为生产环境修改配置
@@ -15,6 +20,13 @@ module.exports = {
     },
     lintOnSave: true,// 是否在保存的时候检查
     productionSourceMap: false, // 生产环境是否生成 sourceMap 文件，可以将其设置为 false 以加速生产环境构建。
+   
+    //css配置
+    chainWebpack: config => {
+      config.resolve.alias
+        .set('common', resolve('src/common'))
+    },
+    
     // webpack-dev-server 配置
     devServer: {
         open: process.platform === 'darwin',

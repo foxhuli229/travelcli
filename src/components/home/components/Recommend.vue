@@ -11,7 +11,13 @@
     </div>
 
     <ul class="rec-list">
-      <li class="border-bottom item" v-for="(item, index) of list" :key="index">
+      <router-link 
+        :to="'/detail/' + item.id"
+        tag="li"
+        class="border-bottom item" 
+        v-for="(item, index) of list" 
+        :key="index"
+        >
         <a :href="item.linkUrl">
           <div class="rec-list-imgcon image-ready">
             <img
@@ -53,7 +59,7 @@
             </div>
           </div>
         </a>
-      </li>
+      </router-link>
     </ul>
   </div>
 </template>
