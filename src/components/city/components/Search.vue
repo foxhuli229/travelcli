@@ -90,6 +90,7 @@ export default {
       // this.$store.commit('changeCity', city); //省略后
       this.changeCity(city);
       this.$router.push('/') //点击后，跳转到首页
+      this.keyvalue = "";
     },
     ...mapMutations(['changeCity'])
   },

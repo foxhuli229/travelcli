@@ -81,7 +81,7 @@ export default {
 
         .swiper-pagination {
             color #ffffff;
-            bottom -4.5rem;
+            bottom -1rem;
         }
     }
 }
