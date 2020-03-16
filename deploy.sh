@@ -10,7 +10,7 @@ npm run build
 cd dist
 
 # 部署到自定义域域名
-# echo 'www.example.com' > CNAME
+# echo 'foxhuli.top' > CNAME
 
 git init
 git add -A
@@ -18,7 +18,7 @@ git commit -m 'deploy'
 
 # 部署到 https://<USERNAME>.github.io
 # git push -f git@github.com:<USERNAME>/<USERNAME>.github.io.git master
-git push -f git@github.com:foxhuli229/voting.git master
+git push -f git@github.com:foxhuli229/travelcli.git
 
 # 部署到 https://<USERNAME>.github.io/<REPO>
 # git push -f git@github.com:<USERNAME>/<REPO>.git master:gh-pages
