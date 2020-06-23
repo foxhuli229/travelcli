@@ -1,4 +1,5 @@
 // 字母表
+// touch：触发事件（https://blog.csdn.net/wangmx1993328/article/details/83270166）
 <template>
   <ul class="list">
       <li 
@@ -7,7 +8,7 @@
         :key="key"
         :ref="item"
         @click="handleLetterClick"
-        @touchstart="handleTouchStart"
+        @toucchstart="handleTouchStart"
         @touchmove="handleTouchMove"
         @touchend="handleTouchEnd"
         >{{item}}</li>
