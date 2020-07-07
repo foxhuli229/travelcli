@@ -24,7 +24,7 @@ module.exports = {
     //css配置
     chainWebpack: config => {
       config.resolve.alias
-        .set('common', resolve('src/common'))
+        .set('common', resolve('src/components'))
     },
     
     // webpack-dev-server 配置

@@ -1,30 +1,16 @@
-# travel
+# 去哪儿网移动端
 
-## Project setup
-```
-npm install
-```
+## vue2.0 升级 vue3.0
 
-### Compiles and hot-reloads for development
-```
-npm run serve
+```bash
+vue add vue-next
 ```
 
-### Compiles and minifies for production
-```
-npm run build
-```
+## 分支管理
 
-### Run your tests
-```
-npm run test
-```
+```bash
 
-### Lints and fixes files
-```
-npm run lint
-
-# 安装swiper https://github.com/surmon-china/vue-awesome-swiper 版本太低
+# 安装指定版本依赖
 npm install vue-awesome-swiper@2.6.7 --save
 
 # git 创建新分支
@@ -57,6 +43,3 @@ install
 npm uninstall XXX -S 卸载XXX依赖
 
 ```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
