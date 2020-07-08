@@ -42,7 +42,9 @@ export default {
     const city = store.state.city; //城市
 
     //获取城市信息
-    async const getHomeInfo = () => {
+    async function getHomeInfo() {
+      console.log("11");
+      
       let res = await axios.get('/api/index.json?city=' + city.value);
       res = res.data;
       if(res.code === 200) {

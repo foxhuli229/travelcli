@@ -12,11 +12,11 @@
 
     <ul class="rec-list">
       <router-link 
-        :to="'/detail/' + item.id"
         tag="li"
         class="border-bottom item" 
         v-for="(item, index) of list" 
         :key="index"
+        :to="'/detail/' + item.id"
         >
         <a :href="item.linkUrl">
           <div class="rec-list-imgcon image-ready">
@@ -36,14 +36,14 @@
             <div class="rec-list-title">{{item.title}}</div>
             <div class="rec-list-comment">
               <!-- vant评分 -->
-              <van-rate
+              <!-- <van-rate
                 class="vantrate"
                 v-model="item.rate"
                 color="#ffb436"
                 void-color="#ffb436"
                 :size="12"
                 readonly
-              />
+              /> -->
               <span class="rec-comment-num">{{item.commentNum}}</span>
             </div>
             <div class="rec-list-price">
@@ -65,20 +65,16 @@
 </template>
 
 <script>
-import { Rate } from "vant";
+// import { Rate } from "vant";
 export default {
+  name: "HomeRecommend",
   components: {
-    [Rate.name]: Rate
+    // [Rate.name]: Rate
   },
   props: {
     list: Array,
   },
-  name: "HomeRecommend",
-  data() {
-    return {
-     
-    };
-  }
+  
 };
 </script>
 

@@ -1,5 +1,5 @@
 <template>
-   <div class="header">
+  <div class="header">
     <div class="header-left">
       <div class="iconfont back-icon">&#xe653;</div>
     </div>
@@ -9,37 +9,39 @@
     </div>
 
     <router-link to="/City">
-        <div class="header-right"> {{this.city}}
-          <span class="iconfont arrow-icon">&#xe771;</span>
-        </div>
+      <div class="header-right">
+        {{ city }}
+        <span class="iconfont arrow-icon">&#xe771;</span>
+      </div>
     </router-link>
   </div>
 </template>
 
 <script>
-import { mapState, mapGetters } from 'vuex' //映射，{{this.$store.state.city}} 使该代码简化为 this.city
+import { mapState, mapGetters, useStore } from "vuex";
+import { computed } from "vue";
+
 export default {
-    name: 'HomeHeader',
-    computed: {
-      ...mapState(['city']),
-      ...mapGetters(['doubleCity']) //复合属性
-    }
-    // props: {
-    //   city: String  {{this.city}}
-    // }
-}
+  name: "HomeHeader",
+  setup() {
+    const store = useStore();
+    const city = store.state.city;
+
+    return { city };
+  },
+};
 </script>
 
 <style lang="stylus" scoped>
-// 1rem = html font-size = 50px
 @import '~@/assets/styles\varibles.styl';
+// 1rem = html font-size = 50px
 .header
   display flex
   line-height $headerHeight
   height $headerHeight
   background-color $bgColor
   color #ffffff
-  .header-left 
+  .header-left
     width .64rem
     float left
     .back-icon
@@ -65,5 +67,3 @@ export default {
       font-size .24rem
       margin-left -.04rem
 </style>
-
-

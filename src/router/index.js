@@ -1,15 +1,15 @@
-import Vue from 'vue'
-import Router from 'vue-router'
 
-Vue.use(Router)
+import {createRouter, createWebHashHistory} from 'vue-router'
 
-export default new Router({
-    mode: "history",
+
+export default createRouter({
+    history: createWebHashHistory(),
+    
     routes: [
         {
             path: '/',
             name: 'Home',
-            component: import("@/views/city/Home")
+            component: import("@/views/home/Home")
         },
         {
             path: '/city',

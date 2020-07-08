@@ -55,7 +55,7 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-.container >>> .swiper-container {
+.container ::v-deep .swiper-container {
     overflow inherit;
 }
 .container {

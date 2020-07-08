@@ -22,10 +22,10 @@
 </template>
 
 <script>
-import { Rate } from "vant";
+// import { Rate } from "vant";
 export default {
   components: {
-    [Rate.name]: Rate
+    // [Rate.name]: Rate
   },
   props:{
     list: Array,

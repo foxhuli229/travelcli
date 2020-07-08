@@ -1,78 +1,65 @@
 <template>
-    <div class="icons-content">
-        <div class="icons">
-            <swiper :options="swiperOption">
-                <swiper-slide 
-                    v-for="(page, index) of pages"
-                    :key="index">
-                    <div class="icon" 
-                        v-for="item of page" 
-                        :key="item.id"
-                    >
-                        <div class="icon-img">
-                            <img class="icon-imgcontent" :src="item.imgUrl"/>
-                        </div>
-                        <p class="icon-desc">{{item.desc}}</p>
-                    </div>
-                </swiper-slide>
-                <!-- Optional controls -->
-                <div class="swiper-pagination"  slot="pagination"></div>   
-            </swiper>    
-        </div>
-       
-        <ul class="icon-bottom">
-            <li>
-                <span class="iconfont">&#xe60f;</span>
-                定位失败
-            </li>
-            <li>
-                <span class="iconfont">&#xe633;</span>
-                必有榜单
-            </li>
-        </ul>
+  <div class="icons-content">
+    <div class="icons">
+      <swiper :options="swiperOption">
+        <swiper-slide v-for="(page, index) of pages" :key="index">
+          <div class="icon" v-for="item of page" :key="item.id">
+            <div class="icon-img">
+              <img class="icon-imgcontent" :src="item.imgUrl" />
+            </div>
+            <p class="icon-desc">{{ item.desc }}</p>
+          </div>
+        </swiper-slide>
+        <!-- Optional controls -->
+        <div class="swiper-pagination" slot="pagination"></div>
+      </swiper>
     </div>
+
+    <ul class="icon-bottom">
+      <li>
+        <span class="iconfont">&#xe60f;</span>
+        定位失败
+      </li>
+      <li>
+        <span class="iconfont">&#xe633;</span>
+        必有榜单
+      </li>
+    </ul>
+  </div>
 </template>
 
 <script>
+import { computed, ref } from "vue";
+
 export default {
-    name: 'HomeIcons',
-    props: {
-        list: Array,
-    },
-    data() {
-        return {
-            swiperOption: {
-                  pagination: {
-                    el: '.swiper-pagination',
-                    type: 'bullets'
-                }
-            },
-            iconsfontList: [{
-                id: '00010',
-                title : '定位失败',
-                icons: '&#xe60f;'
-            },
-            {
-                id: '00011',
-                title: '必有榜单',
-                icons: '&#xe633;'
-            }]
+  name: "HomeIcons",
+  props: {
+    list: Array,
+  },
+  setup(props) {
+    const swiperOption = {
+      pagination: {
+        el: ".swiper-pagination",
+        type: "bullets",
+      },
+    };
+
+    const pages = computed(() => {
+      const pages = [];
+      props.list.forEach((item, index) => {
+        const page = Math.floor(index / 8);
+        if (!pages[page]) {
+          pages[page] = [];
         }
-    },
-    computed: {
-        pages () {
-            const pages = []
-            this.list.forEach((item, index) => {
-                const page = Math.floor(index / 8)
-                if (!pages[page]) {
-                pages[page] = []
-                }
-                pages[page].push(item)
-            })
-            return pages
-        }
-    }
-}
+        pages[page].push(item);
+      });
+
+      return pages;
+    });
+
+    return { pages, swiperOption };
+  },
+};
 </script>
 
 <style lang="stylus" scoped>
@@ -81,10 +68,10 @@ export default {
 .icons-content
     height auto
     background-color #ffffff
-    .icons >>> .swiper-container
+    .icons ::v-deep .swiper-container
         height: 0
         padding-bottom: 55%
-    .icons >>> .swiper-pagination-bullets
+    .icons ::v-deep .swiper-pagination-bullets
         bottom 0px
     .icon
         position: relative
@@ -134,7 +121,4 @@ export default {
 .icon-bottom li:nth-child(2)
     border-left 1px solid #e0e0e0
     transform-origin: 0 0;
-        
 </style>
-
-

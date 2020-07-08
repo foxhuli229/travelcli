@@ -15,10 +15,10 @@
 
 <script>
 import axios from "axios";
-import CityHeader from "@/components/city/components/Header";
-import CitySearch from "@/components/city/components/Search";
-import CityList from "@/components/city/components/List";
-import CityAplhabet from "@/components/city/components/Aplhabet";
+import CityHeader from "@/views/city/components/Header";
+import CitySearch from "@/views/city/components/Search";
+import CityList from "@/views/city/components/List";
+import CityAplhabet from "@/views/city/components/Aplhabet";
 export default {
   name: "City",
   components: {
